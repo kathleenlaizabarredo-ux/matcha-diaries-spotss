@@ -9,13 +9,13 @@
 
     <style>
         a {
-            color: #E8F3DF;
+            color: #FCE7EA;
             text-decoration: none;
         }
     </style>
 </head>
 
-<body style="background-color: rgb(35, 43, 44); color: white;">
+<body style="background-color: #FFF0F3; color: #4F5945;">
 
     <header>
         <h1 style="text-align: center;">Your Matcha Spot Guide</h1>
@@ -63,7 +63,45 @@
                 Discover cute cafés, delicious matcha drinks, and new spots around the town.
             </p>
         </section>
-
+<section>
+        <h2 style="text-align: center;">Send Me a Message</h2>
+    
+        <form>
+            <fieldset>
+                <legend>Your details</legend>
+    
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <br><br>
+    
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Choose a subject</option>
+                    <option value="suggest-place">Suggest a place</option>
+                    <option value="correct-detail">Correct a detail</option>
+                    <option value="question">Ask a question</option>
+                    <option value="other">Something else</option>
+                </select>
+    
+                <br><br>
+    
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required
+                    style="width: 100%; box-sizing: border-box;"></textarea>
+    
+            </fieldset>
+    
+            <div style="text-align: center; margin-top: 15px;">
+                <button type="submit">Send message</button>
+            </div>
+        </form>
+    </section>
     </main>
 
     <footer>
