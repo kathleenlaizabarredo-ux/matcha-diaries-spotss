@@ -4,55 +4,166 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Matcha Diaries Spots</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Matcha Diaries Spots - Place Detail</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
     <header>
-        <h1 style="text-align: center;">Your Matcha Spot Guide</h1>
 
-        <p style="text-align: center;">
-            Sip. Explore. Repeat.
-        </p>
+        <h1 >Yssa's Matcha</h1>
 
         <nav>
-            <ul style="list-style-type: none; display: flex; justify-content: center; gap: 20px; padding: 0;">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+            <ul>
+
+                <li><a href="../index.html">Home</a></li>
+
+                <li><a href="../about.html">About</a></li>
+
+                <li><a href="../contact.html">Contact</a></li>
+
             </ul>
+
         </nav>
+
     </header>
 
     <main>
 
+        <section class="place_detail">
+
+            <h2>Yssa's Matcha</h2>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs-7i6i_1rNOAeMB10z0oODsPNltM21rv3yYDmJkPSEdg2WrZWRE9oPMEv&s=10"
+
+                 alt="Yssa's Matcha">
+
+            <br>
+
+            <p>
+
+                Yssa's Matcha is a cute matcha spot located in
+
+                Salcedo, Makati. It is a great choice for anyone
+
+                who enjoys rich, creamy, and refreshing matcha drinks.
+
+            </p>
+
+            <p>
+
+                Perfect for a relaxing matcha break, catching up with
+
+                friends, or enjoying a peaceful afternoon around Makati.
+
+            </p>
+
+        </section>
+
         <section>
-            <h2 style="text-align: center;">About Matcha Spots</h2>
 
-            <p style="text-align: center;">
-                Welcome to Matcha Spots, your little guide to discovering cozy cafés
-                and delicious matcha drinks around the town.
-            </p>
+            <h2 class="label">Place Details</h2>
 
-            <p style="text-align: center;">
-                Whether you're looking for a quiet place to study, a cute café for
-                photos, or simply your next favorite matcha latte, we've got a spot for you.
-            </p>
+            <table border="1" style="margin: 0 auto;">
 
-            <p style="text-align: center;">
-                My goal is to help you find cute places, discover new matcha drinks,
-                and enjoy your next matcha date with friends, family, or your loved ones.
-            </p>
+                <tr>
+
+                    <th>Location</th>
+
+                    <th>Best For</th>
+
+                    <th>Atmosphere</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Salcedo, Makati</td>
+
+                    <td>Relaxing Breaks</td>
+
+                    <td>Calm & Cute</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section>
+
+            <h2 class="label">Why Visit</h2>
+
+            <ul class="place_p">
+
+                <li>Rich and creamy matcha</li>
+
+                <li>Relaxing atmosphere</li>
+
+                <li>Cute place for a matcha break</li>
+
+                <li>Great for friends and café dates</li>
+
+            </ul>
+
+        </section>
+
+        <section>
+            <h2 class="label">Suggest a Place</h2>
+        
+            <form class="product_form">
+        
+                <label for="place-name">Place Name:</label>
+                <input type="text" id="place-name" name="place-name" required>
+        
+                <br><br>
+        
+                <fieldset>
+                    <legend>What type of place is it?</legend>
+        
+                    <input type="radio" id="food" name="category" value="food">
+                    <label for="food">Food</label>
+        
+                    <input type="radio" id="study" name="category" value="study">
+                    <label for="study">Study Spot</label>
+        
+                    <input type="radio" id="outdoors" name="category" value="outdoors">
+                    <label for="outdoors">Outdoors</label>
+                </fieldset>
+        
+                <br>
+        
+                <p>What's good about it?</p>
+        
+                <input type="checkbox" id="affordable" name="good-points" value="affordable">
+                <label for="affordable">Affordable</label>
+        
+                <input type="checkbox" id="wifi" name="good-points" value="wifi">
+                <label for="wifi">Good Wi-Fi</label>
+        
+                <input type="checkbox" id="quiet" name="good-points" value="quiet">
+                <label for="quiet">Quiet</label>
+        
+                <br><br>
+        
+                <label for="email">Contact Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <br><br>
+        
+                <button type="submit">Suggest Place</button>
+        
+            </form>
         </section>
 
     </main>
 
     <footer>
-        <p style="text-align: center;">
-            &copy; 2026 Kathleen's Matcha Diaries Spots. All rights reserved.
-        </p>
+
+        <p>© 2026 Matcha Diaries. Made with love and matcha.</p>
+
     </footer>
 
 </body>
