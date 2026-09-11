@@ -124,6 +124,10 @@ header::before {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header > * {
@@ -165,11 +169,11 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 10px;
+  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a {
@@ -196,7 +200,11 @@ ul{
   background-color: rgba(190, 248, 200, 0.493);
 }
 
-
+.place-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
 .place-card {
   background-color: rgba(240, 255, 243, 0.63);
   border-radius: 8px;
@@ -204,7 +212,6 @@ ul{
   border: 2px solid var(--dark-ink);
   border-left: 6px solid var(--brand);
   border-top: 2px solid var(--brand);
-  margin-bottom: 1.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   text-align: center;
 
