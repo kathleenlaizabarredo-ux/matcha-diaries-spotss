@@ -25,7 +25,7 @@ body {
 }
 
 #matcha_around {
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-family: cursive;
 }
 
@@ -35,15 +35,24 @@ section.place_detail {
   border: 2px solid var(--dark-ink);
   border-radius: 10px;
 }
+
 .place_detail img {
   border-radius: 1rem;
   max-width: 100%;
-  height: 300px;
   width: 300px;
-
+  height: 300px;
+  object-fit: cover;
 }
+
+section img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
 section.cover {
   background-image: url("https://i.pinimg.com/736x/e9/b4/d2/e9b4d25daec6af280c378d1cd824858b.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   padding: 20px;
   position: relative;
@@ -52,145 +61,46 @@ section.cover {
   flex-direction: column;
   justify-content: center;
 }
+
 section.cover::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(13, 51, 9, 0.274);
-    border-radius: 10px;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 51, 9, 0.274);
+  border-radius: 10px;
 }
+
 section.cover > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
+
 section.cover h2 {
-    text-align: center;
-    color: var(--border-color);
+  text-align: center;
+  color: var(--border-color);
 }
+
 section.cover p {
-  color: var(--border-color)
+  color: var(--border-color);
 }
+
 .send_message {
   background-color: var(--light-bg);
   border-radius: 1rem;
 }
+
 .contact_text {
   background-color: rgba(190, 248, 200, 0.493);
   padding: 15px;
   border: 2px solid var(--dark-ink);
   border-radius: 1rem;
 }
+
 .about {
   background-color: rgba(190, 248, 200, 0.493);
   padding: 15px;
   border: 2px solid var(--dark-ink);
   border-radius: 1rem;
-}
-.overlay {
- background-color: rgba(0, 0, 0, 0.425);
- border-radius: 15px;
- padding: 35px;
- margin: 30px;
- position: center;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-}
-section img {
-  max-width: 300px;
-  max-height: 300px;
-}
-header {
-  position: relative;
-  background-color: var(--card-bg);
-  background-image: url("https://i.pinimg.com/736x/34/71/df/3471df41c7faadda3bd9bd26f85bfe30.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
-  padding: 30px;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header > * {
-    position: relative;
-    z-index: 1;
-}
-
-header h1 {
-  color: var(--card-bg);
-  margin: 0 0 0.5rem 0;
-}
-header p {
-  color: var(--card-bg);
-}
-.label {
-  background-color: var(--light-bg);
-  border-radius: 10px;
-}
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: var(--muted-grey);
-  border-top: 2px solid var(--card-bg);
-  margin-top: 3rem;
-}
-
-
-nav {
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-nav a {
-    color: var(--brand);
-    text-decoration: none;
-    background-color: rgba(190, 248, 200, 0.493);
-    border-radius: 1rch;
-    padding:  5px;
-}
-
-nav a:hover {
-    color: var(--dark-ink);
-    background-color: var(--light-bg);
-}
-
-ul{
-  list-style-type: none;
 }
 
 .place_p {
@@ -200,25 +110,128 @@ ul{
   background-color: rgba(190, 248, 200, 0.493);
 }
 
+.label {
+  background-color: var(--light-bg);
+  border-radius: 10px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 15px;
+  padding: 35px;
+  margin: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  background-color: var(--card-bg);
+  background-image: url("https://i.pinimg.com/736x/34/71/df/3471df41c7faadda3bd9bd26f85bfe30.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  color: var(--card-bg);
+  margin: 0 0 0.5rem 0;
+}
+
+header p {
+  color: var(--card-bg);
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--brand);
+  text-decoration: none;
+  background-color: rgba(190, 248, 200, 0.493);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+nav a:hover {
+  color: var(--dark-ink);
+  background-color: var(--light-bg);
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .place-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .place-card {
   background-color: rgba(240, 255, 243, 0.63);
   border-radius: 8px;
   padding: 16px;
+
   border: 2px solid var(--dark-ink);
   border-left: 6px solid var(--brand);
   border-top: 2px solid var(--brand);
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
   text-align: center;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  flex: 1 1 240px;
+  min-width: 0;
 }
 
 .place-card h3 {
@@ -228,9 +241,10 @@ ul{
 }
 
 .place-card img {
-  max-width: 100%;
-  height: 400px;
-  width: 400px;
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 4px;
 }
 
@@ -239,7 +253,7 @@ ul{
   text-decoration: none;
   background-color: var(--brand);
   padding: 6px;
-  border-radius: 1rch;
+  border-radius: 10px;
   border: 2px solid var(--brand);
 }
 
@@ -248,7 +262,6 @@ ul{
   background-color: var(--light-bg);
 }
 
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -256,7 +269,8 @@ table {
   border-color: var(--dark-ink);
 }
 
-th, td {
+th,
+td {
   padding: 0.75rem;
   border: 2px solid var(--dark-ink);
   text-align: center;
@@ -267,7 +281,6 @@ th {
   background-color: rgba(190, 248, 200, 0.493);
   color: var(--dark-ink);
 }
-
 
 fieldset {
   border: 2px solid var(--dark-ink);
@@ -283,42 +296,7 @@ legend {
   padding: 0 0.5rem;
 }
 
-input[type="text"] {
-  background-color: rgba(190, 248, 200, 0.493);
-  border-radius: 1rch;
-  width: 400px;
-  height: 30px;
-}
-input[type="email"] {
-  background-color: rgba(190, 248, 200, 0.493);
-  border-radius: 1rch;
-  width: 400px;
-  height: 30px;
-}
-input[type="number"] {
-  background-color: rgba(190, 248, 200, 0.493);
-  border-radius: 15px;
-  width: 400px;
-  height: 30px;
-}
-select{
-  background-color: rgba(190, 248, 200, 0.493);
-  border-radius: 1rch;
-  width: 400px;
-  height: 30px;
-}
-textarea {
-  width: 100%;
-  padding: 0.6rem;
-  border: 1px solid var(--muted-grey);
-  border-radius: 4px;
-  font-size: 1rem;
-  margin-top: 0.25rem;
-  background-color: rgba(190, 248, 200, 0.493);
-}
-
 form {
-  
   border-radius: 15px;
   padding: 15px;
 }
@@ -328,12 +306,56 @@ form.product_form {
   background-color: rgba(190, 248, 200, 0.493);
 }
 
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+  max-width: 400px;
+  height: 35px;
+  padding: 5px 10px;
+
+  border: 1px solid var(--muted-grey);
+  border-radius: 10px;
+
+  background-color: rgba(190, 248, 200, 0.493);
+}
+
+textarea {
+  width: 100%;
+  max-width: 500px;
+  min-height: 120px;
+
+  padding: 0.6rem;
+
+  border: 1px solid var(--muted-grey);
+  border-radius: 4px;
+
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+
+  margin-top: 0.25rem;
+
+  background-color: rgba(190, 248, 200, 0.493);
+
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--brand);
+}
+
 button[type="submit"] {
   background-color: var(--brand);
   color: #ffffff;
+
   padding: 0.75rem 1.5rem;
+
   border: none;
   border-radius: 4px;
+
   font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
@@ -343,10 +365,10 @@ button[type="submit"]:hover {
   opacity: 0.9;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: 3px solid var(--brand);
-  outline-offset: 2px;
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted-grey);
+  border-top: 2px solid var(--card-bg);
+  margin-top: 3rem;
 }
